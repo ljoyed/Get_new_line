@@ -6,7 +6,7 @@
 /*   By: loandrad <loandrad@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 21:15:20 by loandrad          #+#    #+#             */
-/*   Updated: 2023/03/07 12:13:25 by loandrad         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:54:33 by loandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ char	*append_txt_blk(int fd, char *txt_blk)
 		if (rd_bytes == -1)
 		{
 			free(buff);
+			free(txt_blk);
 			return (NULL);
 		}
 		buff[rd_bytes] = '\0';
